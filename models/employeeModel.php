@@ -12,9 +12,14 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
+echo '<br>';
+
+// $id = $_GET['number'];
 
 $queryEmployees = 'SELECT * FROM employees';
-$queryById = 'SELECT * FROM employees WHERE emp_no ='.$id;
+// $queryById = 'SELECT * FROM employees WHERE emp_no ='. $id;
+
+// echo $id;
 
 function get($query){
 
@@ -35,7 +40,7 @@ function get($query){
         $i++;
     }
 
-    return $result;
+    return($result);
 
 }
 
@@ -59,5 +64,5 @@ function get($query){
 
 // }
 
-get($queryEmployees);
-get($queryId);
+// get($queryEmployees);
+// get($queryById);
