@@ -13,8 +13,10 @@ if (!$conn) {
 }
 echo "Connected successfully";
 
+$queryEmployees = 'SELECT * FROM employees';
+$queryById = 'SELECT * FROM employees WHERE emp_no ='.$id;
 
-function get(){
+function get($query){
 
     global $servername;
     global $username;
@@ -22,8 +24,7 @@ function get(){
     global $database;
 
     $conn = new mysqli($servername, $username,$password, $database);
-    $queryEmployees = 'SELECT * FROM employees';
-    $selectAll = $conn->query($queryEmployees);
+    $selectAll = $conn->query($query);
 
 
     $result = [];
@@ -38,24 +39,25 @@ function get(){
 
 }
 
-function getById($id){
-    global $servername;
-    global $username;
-    global $password;
-    global $database;
+// function getById($id){
+//     global $servername;
+//     global $username;
+//     global $password;
+//     global $database;
 
-    $conn = new mysqli($servername, $username,$password, $database);
-    $queryById = 'SELECT * FROM employees WHERE emp_no ='.$id;
-    $selectById = $conn->query($queryById);
+//     $conn = new mysqli($servername, $username,$password, $database);
+//     $selectById = $conn->query($queryById);
 
-    $result = [];
+//     $result = [];
 
-    $i = 0;
-    while ($file = $selectById->fetch_assoc()) {
-        $result[$i]=$file;
+//     $i = 0;
+//     while ($file = $selectById->fetch_assoc()) {
+//         $result[$i]=$file;
 
-    }
-    print_r($result);
+//     }
+//     print_r($result);
 
-}
-getById(14);
+// }
+
+get($queryEmployees);
+get($queryId);
