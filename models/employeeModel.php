@@ -45,11 +45,8 @@ function getById($id){
     global $database;
 
     $conn = new mysqli($servername, $username,$password, $database);
-    $queryEmployees = 'SELECT * FROM employees';
-    $selectAll = $conn->query($queryEmployees);
-
-    $queryId = 'SELECT * FROM employees WHERE emp_no ='.$id;
-    $selectById = $conn->query($queryId);
+    $queryById = 'SELECT * FROM employees WHERE emp_no ='.$id;
+    $selectById = $conn->query($queryById);
 
     $result = [];
 
@@ -61,4 +58,4 @@ function getById($id){
     print_r($result);
 
 }
-getById(10);
+getById(14);
