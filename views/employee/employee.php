@@ -20,13 +20,11 @@
 
         <tbody>
             <?php
-                foreach ($result as $employee) {
                     echo "<tr>";
-                    echo "<td>". $employee['id'] ."</td>";
-                    echo "<td>". $employee['first_name'] . $employee["last_name"] . "</td>";
-                    echo "<td>". $employee['gender'] ."</td>";
+                    echo "<td>". $employee[0]['emp_no'] ."</td>";
+                    echo "<td>". $employee[0]['first_name'] . ' ' . $employee[0]["last_name"] . "</td>";
+                    echo "<td>". $employee[0]['gender'] ."</td>";
                     echo "</tr>";
-                }
 
             ?>
         </tbody>
@@ -34,4 +32,3 @@
     </table>
 
 </body>
-</html>
