@@ -40,8 +40,7 @@ function get($query){
         $i++;
     }
 
-    return($result);
-
+    return $result;
 }
 
 // function getById($id){
@@ -64,5 +63,5 @@ function get($query){
 
 // }
 
-// get($queryEmployees);
+//get($queryEmployees);
 // get($queryById);

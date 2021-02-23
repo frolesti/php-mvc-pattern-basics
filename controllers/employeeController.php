@@ -1,6 +1,7 @@
 <?php
 
 require_once 'models/employeeModel.php';
+require("views/employee/employee.php");
 
 //OBTAIN THE ACCION PASSED IN THE URL AND EXECUTE IT AS A FUNCTION
 
@@ -18,6 +19,7 @@ function getAllEmployees()
     //
     $queryEmployees = 'SELECT * FROM employees';
     get($queryEmployees);
+    print($queryEmployees);
 }
 
 /**
@@ -26,6 +28,7 @@ function getAllEmployees()
 function getEmployee($request)
 {
     //
+
 }
 
 /**

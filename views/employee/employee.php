@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lista De Usuarios</title>
+    <title>Employees MySQL</title>
 </head>
 <body>
-    
+
     <table>
 
         <thead>
@@ -20,8 +20,7 @@
 
         <tbody>
             <?php
-
-                foreach ($employees as $employee) {
+                foreach ($result as $employee) {
                     echo "<tr>";
                     echo "<td>". $employee['id'] ."</td>";
                     echo "<td>". $employee['first_name'] . $employee["last_name"] . "</td>";

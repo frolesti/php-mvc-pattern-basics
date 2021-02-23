@@ -7,11 +7,12 @@
 include_once "config/constants.php";
 require_once 'controllers/employeeController.php';
 
+
 // TODO Implement the logic to include the controller passed by the URL dynamically
 // In the event that the controller passed by URL does not exist, you must show the error view.
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Document</title>
@@ -25,4 +26,4 @@ require_once 'controllers/employeeController.php';
         <input type="submit" value="Submit">
     </form>
 </body>
-</html>
+</html> -->
