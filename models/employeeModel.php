@@ -40,11 +40,11 @@ function get($query){
         $i++;
     }
 
-    // print_r($result);
-    return $result;
+    print_r($result);
+    // return $result;
 
 }
-// get($queryEmployees);
+get($queryEmployees);
 
 // function getById($id){
 //     global $servername;

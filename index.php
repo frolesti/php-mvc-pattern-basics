@@ -19,7 +19,7 @@ require_once 'controllers/employeeController.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <form action="models/employeeModel.php" method="get">
+    <form action="" method="get">
         <input type="text" name ='number' id="number" placeholder="Put your Id">
         <input type="submit" value="Submit">
     </form>

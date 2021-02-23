@@ -1,6 +1,7 @@
 <?php
 
 require_once 'models/employeeModel.php';
+require_once 'views/employee/employee.php';
 
 //OBTAIN THE ACCION PASSED IN THE URL AND EXECUTE IT AS A FUNCTION
 
@@ -18,7 +19,7 @@ function getAllEmployees()
     //
     $queryEmployees = 'SELECT * FROM employees';
 
-    print_r(get($queryEmployees));
+    return(get($queryEmployees));
 }
 getAllEmployees();
 echo '<br>';
@@ -31,9 +32,9 @@ function getEmployee($request)
 {
     //
     $queryById = 'SELECT * FROM employees WHERE emp_no = '. $request;
-    print_r(get($queryById));
+    return(get($queryById));
 }
-getEmployee(10);
+// getEmployee(10);
 
 /**
  * This function includes the error view with a message
