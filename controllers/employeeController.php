@@ -21,6 +21,9 @@ function getAllEmployees()
     get($queryEmployees);
     print($queryEmployees);
 }
+getAllEmployees();
+echo '<br>';
+echo '<br>';
 
 /**
  * This function calls the corresponding model function and includes the corresponding view
@@ -28,8 +31,8 @@ function getAllEmployees()
 function getEmployee($request)
 {
     //
-
 }
+getEmployee(10);
 
 /**
  * This function includes the error view with a message

@@ -17,7 +17,7 @@ echo '<br>';
 // $id = $_GET['number'];
 
 $queryEmployees = 'SELECT * FROM employees';
-// $queryById = 'SELECT * FROM employees WHERE emp_no ='. $id;
+
 
 // echo $id;
 
@@ -42,6 +42,7 @@ function get($query){
 
     return $result;
 }
+// get($queryEmployees);
 
 // function getById($id){
 //     global $servername;
