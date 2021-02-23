@@ -17,8 +17,12 @@ function getAllEmployees()
 {
     //
     $queryEmployees = 'SELECT * FROM employees';
-    get($queryEmployees);
+
+    print_r(get($queryEmployees));
 }
+getAllEmployees();
+echo '<br>';
+echo '<br>';
 
 /**
  * This function calls the corresponding model function and includes the corresponding view
@@ -26,7 +30,10 @@ function getAllEmployees()
 function getEmployee($request)
 {
     //
+    $queryById = 'SELECT * FROM employees WHERE emp_no = '. $request;
+    print_r(get($queryById));
 }
+getEmployee(10);
 
 /**
  * This function includes the error view with a message
