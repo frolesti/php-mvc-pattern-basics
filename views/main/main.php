@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <form action="controllers/employeeController.php" method="get">
-        <input type="submit" value="allEmployees" name="allEmployees">
-        <input type="text" name ='number' id="number" placeholder="Put your Id">
-        <input type="submit" value="Submit" name="getEmployee">
+        <a href="?controller=employee">All Employees</a>
+
+    <form action="?controller=employee" method="post">
+        <input type="text" name ='id' id="id" placeholder="Put your Id">
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
