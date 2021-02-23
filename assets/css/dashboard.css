@@ -1,0 +1,39 @@
+* {
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom right, burlywood, white);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bolder;
+}
+
+.employeeCard{
+    margin: 20px;
+    background: linear-gradient(to right top, white, burlywood);
+    border: 1px solid whitesmoke;
+    border-radius: 25px;
+    box-shadow: 5px 10px whitesmoke;
+    width: 25vw;
+}
+.employeeImageContainer{
+    padding: 0;
+}
+img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 15px;
+}
+.employeeName {
+    text-align: center;
+    font-size: 25px;
+}
+.employeeInfo {
+    text-align: center;
+    line-height: 35px;
+}
