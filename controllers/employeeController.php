@@ -1,7 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 require 'models/employeeModel.php';
 
+=======
+require_once MODELS . 'employeeModel.php';
+>>>>>>> b36d881b44c32e6ea51fc08f786bb17342788b98
 
 
 //OBTAIN THE ACCION PASSED IN THE URL AND EXECUTE IT AS A FUNCTION
@@ -20,7 +24,7 @@ function getAllEmployees()
     //
     $queryEmployees = 'SELECT * FROM employees';
     $employees = get($queryEmployees);
-    require('views/employee/employeeDashboard.php');
+    require_once VIEWS . 'employee/employeeDashboard.php';
 }
 
 /**
@@ -31,7 +35,7 @@ function getEmployee($request)
     //
     $queryById = 'SELECT * FROM employees WHERE emp_no =' . $request;
     $employee = get($queryById);
-    include_once 'views/employee/employee.php';
+    require_once VIEWS . 'employee/employee.php';
 }
 
 /**
@@ -42,10 +46,10 @@ function error($errorMsg)
     require_once VIEWS . "/error/error.php";
 }
 
-if (isset($_GET["allEmployees"])){
+if (!isset($_POST["id"])){
     getAllEmployees();
 }
-elseif (isset($_GET["getEmployee"])){
-    $request = $_GET["number"];
+else{
+    $request = $_POST["id"];
     getEmployee($request);
 }
