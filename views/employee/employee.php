@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lista De Usuarios</title>
+    <title>Employees MySQL</title>
 </head>
 <body>
 
@@ -20,14 +20,11 @@
 
         <tbody>
             <?php
-
-                foreach ($employees as $employee) {
                     echo "<tr>";
-                    echo "<td>". $employee['id'] ."</td>";
-                    echo "<td>". $employee['first_name'] . $employee["last_name"] . "</td>";
-                    echo "<td>". $employee['gender'] ."</td>";
+                    echo "<td>". $employee[0]['emp_no'] ."</td>";
+                    echo "<td>". $employee[0]['first_name'] . ' ' . $employee[0]["last_name"] . "</td>";
+                    echo "<td>". $employee[0]['gender'] ."</td>";
                     echo "</tr>";
-                }
 
             ?>
         </tbody>
@@ -35,4 +32,3 @@
     </table>
 
 </body>
-</html>

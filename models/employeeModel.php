@@ -11,12 +11,12 @@ $conn = new mysqli($servername, $username,$password, $database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
-echo '<br>';
+//echo "Connected successfully";
+//echo '<br>';
 
 // $id = $_GET['number'];
 
-$queryEmployees = 'SELECT * FROM employees';
+//$queryEmployees = 'SELECT * FROM employees';
 
 
 // echo $id;
@@ -40,11 +40,11 @@ function get($query){
         $i++;
     }
 
-    print_r($result);
-    // return $result;
-
+    //print_r($result);
+    return $result;
 }
-get($queryEmployees);
+
+// get($queryEmployees);
 
 // function getById($id){
 //     global $servername;
@@ -66,5 +66,5 @@ get($queryEmployees);
 
 // }
 
-// get($queryEmployees);
+//get($queryEmployees);
 // get($queryById);
