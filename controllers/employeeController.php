@@ -1,6 +1,6 @@
 <?php
 
-include_once('../models/employeeModel.php');
+require 'models/employeeModel.php';
 
 
 
@@ -20,7 +20,7 @@ function getAllEmployees()
     //
     $queryEmployees = 'SELECT * FROM employees';
     $employees = get($queryEmployees);
-    require('../views/employee/employeeDashboard.php');
+    require('views/employee/employeeDashboard.php');
 }
 
 /**
@@ -31,7 +31,7 @@ function getEmployee($request)
     //
     $queryById = 'SELECT * FROM employees WHERE emp_no =' . $request;
     $employee = get($queryById);
-    include_once '../views/employee/employee.php';
+    include_once 'views/employee/employee.php';
 }
 
 /**

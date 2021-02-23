@@ -3,14 +3,15 @@
 // the "index.php", in such a way that you must include the controller passed by the URL
 // dynamically so that it ends up including the view.
 
-include_once "config/constants.php";
+include "config/constants.php";
 // require_once 'controllers/employeeController.php';
 // include_once VIEWS . 'main/main.php';
+
 
 if(isset($_GET["allEmployees"]) && file_exists( CONTROLLERS . 'employeeController.php'  )){
     include CONTROLLERS . "employeeController.php";
 }else{
-    include VIEWS . 'main/main.php';
+    include 'views/main/main.php';
 }
 
 

@@ -1,0 +1,13 @@
+* {
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom right, burlywood, white);
+
+    
+}
