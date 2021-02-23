@@ -1,6 +1,6 @@
 <?php
 
-$BASE_PATH = $_SERVER['SCRIPT_FILENAME'];
+$BASE_PATH = $_SERVER['DOCUMENT_ROOT'] . '/php-mvc-pattern-basics';
 
 //CONTROLLERS
 define("CONTROLLERS", $BASE_PATH . '/controllers/');

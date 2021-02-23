@@ -1,6 +1,7 @@
 <?php
 
-require ('./employeeModel.php');
+include_once('../models/employeeModel.php');
+
 
 
 //OBTAIN THE ACCION PASSED IN THE URL AND EXECUTE IT AS A FUNCTION
@@ -19,7 +20,7 @@ function getAllEmployees()
     //
     $queryEmployees = 'SELECT * FROM employees';
     $employees = get($queryEmployees);
-    require('views/employee/employeeDashboard.php');
+    require('../views/employee/employeeDashboard.php');
 }
 
 /**
@@ -30,7 +31,7 @@ function getEmployee($request)
     //
     $queryById = 'SELECT * FROM employees WHERE emp_no =' . $request;
     $employee = get($queryById);
-    require('views/employee/employee.php');
+    include_once '../views/employee/employee.php';
 }
 
 /**
@@ -45,6 +46,6 @@ if (isset($_GET["allEmployees"])){
     getAllEmployees();
 }
 elseif (isset($_GET["getEmployee"])){
-    $request = $_GET["numbers"];
+    $request = $_GET["number"];
     getEmployee($request);
 }
