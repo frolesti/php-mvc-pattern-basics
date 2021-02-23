@@ -4,19 +4,15 @@
 // dynamically so that it ends up including the view.
 
 require_once "config/constants.php";
-// require_once 'controllers/employeeController.php';
-// include_once VIEWS . 'main/main.php';
-// echo MODELS;
+
 
 if(isset($_GET["controller"])){
     $controller = convertir($_GET['controller']);
 
     if(file_exists($controller)){
         include $controller;
-    }
-
+}
 }else{
-    // echo MODELS;
     require_once VIEWS . 'main/main.php';
 }
 
@@ -24,7 +20,6 @@ function convertir($name){
     $controller = CONTROLLERS . $name . 'Controller.php';
 
     return $controller;
-
 }
 
 

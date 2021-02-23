@@ -1,11 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-require 'models/employeeModel.php';
-
-=======
 require_once MODELS . 'employeeModel.php';
->>>>>>> b36d881b44c32e6ea51fc08f786bb17342788b98
 
 
 //OBTAIN THE ACCION PASSED IN THE URL AND EXECUTE IT AS A FUNCTION
