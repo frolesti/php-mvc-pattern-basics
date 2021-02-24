@@ -1,8 +1,8 @@
 :root {
-    --dark: #2e1114;
-    --darkRed: #501B1D;
-    --darkPurple: #64485C;
-    --lightPurple: #83677B;
+    --dark: #5cdb95;
+    --darkRed: #dcf1bc;
+    --darkPurple: #0e5ead;
+    --lightPurple: #05386b;
     --lightGrey: #adadad;
   }
 * {
@@ -11,7 +11,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, var(--dark), var(--darkPurple));
+    background: linear-gradient(to bottom, var(--dark), var(--darkRed));
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -22,9 +22,9 @@ body {
 .employeeCard{
     margin: 20px;
     background: linear-gradient(to right, var(--lightPurple),var(--darkPurple));
-    border: 1px solid whitesmoke;
+    border: 1px solid rgba(82, 82, 82, 0.3);;
     border-radius: 25px;
-    box-shadow: 5px 10px whitesmoke;
+    box-shadow: 5px 10px rgba(82, 82, 82, 0.3);;
     width: 25vw;
     color: whitesmoke;
 }
