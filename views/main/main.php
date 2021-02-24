@@ -9,11 +9,24 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-        <a href="?controller=employee">All Employees</a>
+    <header class="header_container">
+        <h1 class="header_container__title">Welcome to MVC pattern Basics</h1>
+    </header>
 
-    <form action="?controller=employee" method="post">
-        <input type="text" name ='id' id="id" placeholder="Put your Id">
-        <input type="submit" value="Submit">
+    <main class="main_container">
+
+    <a class="main_container__allEmployees" href="?controller=employee">All Employees</a>
+
+    <p class="main_container__or">or</p>
+
+    <form action="?controller=employee" method="post" class="main_container__formContainer">
+        <input type="text" name ='id' id="id" placeholder="Enter an id" class="main_container_formContainer__inputEmployee">
+        <br>
+        <input type="submit" value="Submit" class="main_container_formContainer__btnSubmit">
     </form>
+
+    </main>
+
+
 </body>
 </html>
